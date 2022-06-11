@@ -328,13 +328,61 @@ a.header:hover {
     width: auto;
 }
 
-@media (max-width: 700px) {
-    .content {
-        width: 30%;
+@media (max-width: 800px) {
+
+    #headshot {
+        padding-left: 4vw;
+        max-width: 30%;
     }
 
+    #title-block {
+        max-width: 80%;
+        margin: 0%;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 2.5vw;
+    }
+
+    h3 {
+        font-size: 2.1vw;
+    }
+    
+    p, h4 {
+        font-size: 1.8vw;
+    }
+
+    h5 {
+        font-size: 1.5vw;
+    }
+
+    .content {
+        width: 30%;
+        margin-bottom: 0.8vh;
+        margin-top: 0.8vh;
+        padding-right: 0.8vw;
+    }
+
+    .item {
+        margin-top: 1.4vh;
+    }
+
+
     .tiled {
-        width: 95%;
+        width: 96%;
+    }
+
+    #footer-text {
+        font-size: 1.6vw
+    }
+
+    #bottom {
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
     }
 /* TODO add small screen support */
 }
