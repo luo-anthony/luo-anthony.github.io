@@ -39,7 +39,6 @@
 }
 
 #hi-block {
-    padding-top: 1%;
     background-color: white;
     display: flex;
     align-items: center;
@@ -67,11 +66,16 @@ h1 {
 }
 
 h2 {
-    margin-top: 0%;
-    padding-top: 0%;
+    margin-top: 0;
+    padding-top: 0;
     font-size: 1.8vw;
     font-weight: 100;
-    margin-bottom: 0%;
+    margin-bottom: 0;
+}
+
+h2.food {
+    font-size: 2.4vw;
+    margin-bottom: 2vh;
 }
 
 h3 {
@@ -91,6 +95,13 @@ h4 {
     margin-bottom: 0;
 }
 
+h4.food {
+    padding: 2vh;
+    width: 80%;
+    font-size: 1.6vw;
+    text-align: center;
+}
+
 h4.stats {
     font-weight: 500;
     color: #0193E5
@@ -101,6 +112,11 @@ p {
     font-size: 1.2vw;
     font-weight: 300;
     padding-right: 1vw;
+    color: #252525
+}
+
+p.food {
+    font-size: 1.4vw;
     color: #252525
 }
 
@@ -116,7 +132,7 @@ h5 {
 h5.stats {
     font-weight: 400;
     margin-bottom: 0;
-    color: #252525
+    color: #303030
 }
 
 #intro-block {
@@ -238,3 +254,80 @@ a.link {
     opacity: 0.7;
 }
 
+#header {
+    background-color: #252525;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+}
+
+a.header {
+    color: white;
+    text-decoration: none;
+    padding: 0.8vh;
+    border-left: 0.3vw solid white;
+    border-top: 0.3vw solid white;
+    letter-spacing: 0.4vw;
+}
+
+p.header {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-weight: 400;
+    border-right: 0.15vw dashed white;
+}
+
+a.header:hover {
+    opacity: 0.7;
+}
+
+#photopage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: green; */
+}
+
+.photoblock {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: red; */
+    width: 80%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 1vh;
+}
+
+.imagegrid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-photo {
+    flex: 1;
+    max-width: 32%;
+    height: auto;
+    width: auto;
+}
+
+.landscape-photo {
+    max-width: 98%;
+    height: auto;
+    width: auto;
+}
+
+@media (max-width: 700px) {
+/* TODO add small screen support */
+}

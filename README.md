@@ -1,19 +1,9 @@
-## Anthony Luo's Personal Website
-Last Updated June 15, 2021.
+## Anthony Luo's Personal Website - Version 2
 
-Images taken or created by me (© Anthony Luo 2021 Non-CC). Images by others are attributed.
+Last Updated June 11, 2022. Designed and created by me.
 
-### Using Template: Hyperspace by HTML5 UP
-html5up.net | aj@lkn.io | @ajlkn
+Created using Figma, Photoshop, HTML & CSS.
 
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+All images (except headshot) are taken by me - not to be used without explicit permission. 
 
-Credits:
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+##### © 2022 Anthony Luo. All rights reserved. 

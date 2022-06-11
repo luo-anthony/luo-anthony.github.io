@@ -1,212 +1,139 @@
 <!DOCTYPE HTML>
 <!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Designed by Anthony Luo (luo-anthony.github.io)
+    © Anthony Luo 2022 | All rights reserved. 
+    Created using Figma, Photoshop, HTML & CSS
 -->
 <html>
 
 <head>
-	<title>Anthony Luo</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+    <title>Anthony Luo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/anthonystyle.css" />
 </head>
 
-<body class="is-preload">
+<body>
+<div id="base">
+    <!-- Top Block -->
+    <div id="hi-block">
+        <!-- TODO REDUCE SIZE OF PICTURE  -->
+        <img id="headshot" src="images/homepage/AnthonyWebsiteHeadshot.png"> 
+        <div id="title-block">
+            <h1>Hi! I'm Anthony Luo </h1>
+            <div id="intro-block">
+                <h2>I'm a rising senior (graduating May 2023) at
+                    Columbia University studying Computer Science</h2>
+            </div>
+            <hr />
+            <div id="blue-buttons">
+                <a href="https://www.linkedin.com/in/luo-anthony/" class="socialwrapper">
+                    <img alt="LinkedIn" src="assets/buttons/Linkedin.png" class="socialbuttons">
+                </a>
+                <a href="https://scholar.google.com/citations?user=nKipmSkAAAAJ&hl=en" class="socialwrapper">
+                    <img alt="Google Scholar" src="assets/buttons/GoogleScholar.png" class="socialbuttons">
+                </a>
+                <a href="mailto:anthony.luo@columbia.edu" class="socialwrapper">
+                    <img alt="Email" src="assets/buttons/Email.png" class="socialbuttons">
+                </a>
+            </div>
+        </div>
+    </div>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
 
-		<!-- Header -->
-		<header id="header" class="alt">
-			<a href="index.html" class="logo"><strong>Anthony Luo</strong></a>
-			<nav>
-				<a href="#menu">Menu</a>
-			</nav>
-		</header>
+    <!-- Bottom Block -->
+    <div id="bottom">
+        <div class="tiled">
+            <div class="content">
+                <h3>Education</h3>
+                <div class="item">
+                    <h4>Columbia University</h4>
+                    <h5>2019 - 2023, Bachelors, Computer Science</h5>
+                </div>
+                <div class="item">
+                    <h4>University of Oxford</h4>
+                    <h5>Spring 2022, Columbia Oxbridge Scholar</h5>
+                </div>
+                <div class="item">
+                    <h4>Boise High School</h4>
+                    <h5>2017 - 2019</h5>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Industry Experience</h3>
+                <div class="item">
+                    <h4>Five Rings</h4>
+                    <h5>Summer 2022, Incoming SDE Intern</h5>
+                </div>
+                <div class="item">
+                    <h4>Amazon Web Services (AWS)</h4>
+                    <h5>Summer 2021, SDE Intern</h5>
+                </div>
+                <div class="item">
+                    <h4>HP Inc.</h4>
+                    <h5>2019 - 2021, Software Engineer Intern</h5>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Research Experience</h3>
+                <div class="item">
+                    <h4>Cyber Physical Systems Group</h4>
+                    <h5>Spring 2022, University of Oxford</h5>
+                </div>
+                <div class="item">
+                    <h4>Heffner Biomedical Imaging Lab</h4>
+                    <h5>2020 - 2021, Columbia University</h5>
+                </div>
+                <div class="item">
+                    <h4>Software Engr. &amp; Assurance Lab</h4>
+                    <h5>2017 - 2019, Boise State University</h5>
+                </div>
+            </div>
+            <div class="content">
+                <h3>My Stats</h3>
+                <div class="item">
+                    <h4 class="stats">4.17/4.0 GPA</h4>
+                    <h5 class="stats">Columbia University</h5>
+                    <h5 class="stats">(some professors award A+ = 4.33)</h5>
+                </div>
+                <div class="item">
+                    <h4 class="stats">3 peer-reviewed publications </h4>
+                    <h5 class="stats">20+ citations, 2X second author, 1X first author</h5>
+                </div>
+                <div class="item">
+                    <h4 class="stats">Java, C, Python, x86 Assembly, ...</h4>
+                    <h5 class="stats">Core Technical Skills</h5>
+                </div>
+            </div>
+            <div class="content">
+                <p>I'm currently interested in the application of computer science to finance, biotech,
+                aerospace, and embedded systems.</p>
+                <p>For more details about me, see my 
+                    <a class="link" href="https://www.linkedin.com/in/luo-anthony/">Linkedin</a> 
+                    or <a class="link" href="https://scholar.google.com/citations?user=nKipmSkAAAAJ&hl=en">Google Scholar</a>. 
+                    Please feel free to contact me via <a class="link" href="mailto:anthony.luo@columbia.edu">email</a> or message me on Linkedin!
+                </p>
+            </div>
+            <div class="content" id="photobutton" 
+                onclick="location.href = 'photography.html'"
+                style="background-image: url('images/homepage/PhotoButton.jpg');
+                            background-position: center; 
+                            background-repeat: no-repeat;
+                            background-size: cover;">
+                <h3 style="margin-bottom: 2vh; color: white;">Photography</h3>
+                <p style="color: white">In my spare time, I enjoy food, landscape, cityscape, and portrait photography.</p>
+                <p></p>
+                <p style="color: white">Click here to see some of my best photos!</p>
+            </div>
+        </div>
 
-		<!-- Menu -->
-		<nav id="menu">
-			<ul class="links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="education.html">Education &amp; Background</a></li>
-				<li><a href="industry.html">Industry Experience</a></li>
-				<li><a href="research.html">Research Experience</a></li>
-				<li><a href="activities.html">Extracurriculars &amp; Activities</a></li>
-				<li><a href="activities.html">Fun Projects</a></li>
-				<li><a href="publications.html">Publications &amp; Presentations</a></li>
-			</ul>
-			<ul class="actions stacked">
-				<li><a href="#contact" class="button fit">Contact Me</a></li>
-			</ul>
-		</nav>
-
-		<!-- Banner -->
-		<section id="banner" class="major">
-			<div class="inner">
-				<header class="major">
-					<h1>Hi! I'm Anthony
-						Luo</h1>
-				</header>
-				<div class="content">
-					<p>I'm a junior at
-						Columbia University <br />
-						majoring in Computer Science.</p>
-					<ul class="actions">
-						<li><a href="#contact" class="button">Contact Me</a></li>
-						<li><a href="#one" class="button next scrolly">Learn More About Me</a></li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- One -->
-			<section id="one" class="tiles">
-				<article>
-					<span class="image">
-						<img src="images/AnthonyatOxford.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="education.html" class="link">Education &amp; Background</a></h3>
-						<p>University of Oxford, Columbia University, Awards &amp; Honors</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/BridgeSkylineSmall.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="industry.html" class="link">Industry Experience</a></h3>
-						<p>HP, Amazon Web Services (AWS)</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/SEALResearch.jpeg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="research.html" class="link">Research Experience</a></h3>
-						<p>SEAL Lab @ BSU, Heffner Biomedical Imaging Lab @ Columbia University</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/LunAR.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="activities.html" class="link">Extracurriculars &amp; Activities</a></h3>
-						<p>SLICEIT|ICT, Columbia Space Initiative, My Hobbies</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/connect4-3d.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="projects.html" class="link">Fun Projects</a></h3>
-						<p>Discord Tournament Bot, 3D Connect Four, etc.</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/IEEETalk.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="publications.html" class="link">
-								Publications & Presentations</a></h3>
-						<p>IEEE ISI 2019, IEEE COMPSAC 2021, Forensic Science International: Digital Investigation, etc.
-						</p>
-					</header>
-				</article>
-			</section>
-
-			<!-- Two -->
-			<section id="two">
-				<div class="inner">
-					<header class="major">
-						<h2>Skills</h2>
-					</header>
-					<b>Core Technical Skills: </b> Java, C, Python, MATLAB, Git
-					<br \>
-					<b>Other Technical Skills &amp; Technologies:</b> C#, Typescript, MongoDB, Unity, Microsoft
-					Hololens,
-					Agile Software Methodology (JIRA), C++, Scikit-Learn, Pandas, Numpy, Keras, etc.
-					<br \>
-					<b>Software: </b> MacOS, Windows, Linux, Adobe Lightroom, Adobe Premiere Pro, Adobe Illustrator,
-					ITK-SNAP,
-					Gephi, Microsoft Office, Google Drive, etc.
-					<br \>
-					<br \>
-
-				</div>
-			</section>
-
-		</div>
-
-		<!-- Contact -->
-		<section id="contact">
-			<div class="inner">
-				<section>
-					<h2>&nbsp; Contact Me</h2>
-					<p><span class="image left"><img src="images/anthonybluebg.png" alt="" /></span>Feel free to reach
-						out to me
-						via email or LinkedIn - I'd love to talk anything tech, photography,
-						music,
-						or the like! <br \>
-						<br \>
-						Please also feel free to contact me for a copy of my resume, references,
-						transcript, photograph
-						licensing, etc.
-					</p>
-				</section>
-				<section class="split">
-					<section>
-						<div class="contact-method">
-							<span class="icon solid alt fa-envelope"></span>
-							<h3>Email</h3>
-							anthony.luo@columbia.edu
-						</div>
-					</section>
-					<section>
-						<div class="contact-method">
-							<span class="icon brands alt fa-linkedin-in"></span>
-							<h3>LinkedIn</h3>
-							<span><a
-									href="https://www.linkedin.com/in/luo-anthony/">linkedin.com/in/luo-anthony/</a></span>
-						</div>
-					</section>
-				</section>
-			</div>
-		</section>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<ul class="copyright">
-					<li>&copy; Anthony Luo 2021. All images by me (non-CC).</li>
-					<li>Design: <a href="https://html5up.net">HTML5 UP (CC 3.0)</a></li>
-				</ul>
-			</div>
-		</footer>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
+    </div>
+</div>
 </body>
+
+<footer id="footer">
+    <p id="footer-text">&copy; 2022 Anthony Luo. All rights reserved. | Created using Figma, Photoshop, HTML &amp; CSS.</p>
+</footer>
+
 
 </html>
