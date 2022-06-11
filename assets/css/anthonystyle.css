@@ -329,5 +329,12 @@ a.header:hover {
 }
 
 @media (max-width: 700px) {
+    .content {
+        width: 30%;
+    }
+
+    .tiled {
+        width: 95%;
+    }
 /* TODO add small screen support */
 }
