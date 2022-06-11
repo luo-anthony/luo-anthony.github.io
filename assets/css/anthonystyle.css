@@ -352,8 +352,9 @@ a.header:hover {
     h3 {
         font-size: 2.1vw;
     }
-    
-    p, h4 {
+
+    p,
+    h4 {
         font-size: 1.8vw;
     }
 
@@ -370,6 +371,7 @@ a.header:hover {
 
     .item {
         margin-top: 1.4vh;
+        border-left: 0.25vw solid #0193E5;
     }
 
 
@@ -385,5 +387,103 @@ a.header:hover {
         padding-top: 0.5vh;
         padding-bottom: 0.5vh;
     }
-/* TODO add small screen support */
+
+    hr {
+        border-top: 0.15vh solid #0193E5;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .socialbuttons {
+        margin-top: 0.5vw;
+        padding-top: 0vw;
+    }
+}
+
+/* SMARTPHONES */
+
+@media (max-width: 440px) {
+
+    #headshot {
+        padding-left: 0;
+        max-width: 28%;
+    }
+
+    #title-block {
+        max-width: 95%;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        font-size: 2.8vw;
+    }
+
+    h3 {
+        font-size: 3vw;
+    }
+
+    p,
+    h4 {
+        font-size: 2.9vw;
+    }
+
+    h5 {
+        font-size: 2.7vw;
+    }
+
+    .content {
+        width: 87%;
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+        padding: 3vw;
+        overflow: auto;
+    }
+
+    .item {
+        margin-top: 1.4vh;
+        border-left: 0.6vw solid #0193E5;
+        padding-left: 1vw;
+        width: 80%;
+    }
+
+
+    .tiled {
+        width: 95%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: none;
+    }
+
+    #footer-text {
+        text-align: center;
+        font-size: 2.7vw;
+        padding: 2vw;
+    }
+
+    #bottom {
+        padding-top: 0.8vh;
+        padding-bottom: 0.8vh;
+    }
+
+    hr {
+        border-top: 0.15vh solid #0193E5;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .socialwrapper {
+        margin-top: -0.5vh;
+        padding-top: 0;
+    }
+
+    .socialbuttons {
+        margin-top: 0;
+        padding-top: 0vw;
+        max-width: 80%;
+    }
 }
