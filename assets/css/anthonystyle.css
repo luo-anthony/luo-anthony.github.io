@@ -198,7 +198,7 @@ h5.stats {
     border-radius: 2.5vw;
     margin-bottom: 1.5vh;
     margin-top: 1.5vh;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 a.link {
