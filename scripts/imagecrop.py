@@ -26,7 +26,7 @@ def crop_image_top_ratio(image):
 img_path = "/Users/anthonyluo/Documents/WebsiteFullPictures/landscape"
 output_path = "images/cityscape"
 files = [f for f in listdir(img_path) if isfile(join(img_path, f))]
-dimension = 2000
+dimension = 1600
 
 cropFunction = lambda x: x
 
