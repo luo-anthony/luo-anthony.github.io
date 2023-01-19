@@ -327,6 +327,8 @@ a.header:hover {
 .imagegrid {
     display: flex;
     justify-content: space-between;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 
 .grid-photo {
