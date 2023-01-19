@@ -23,12 +23,12 @@ def crop_image_top_ratio(image):
     return image 
 
 
-img_path = "/Users/anthonyluo/Documents/WebsiteFullPictures/square"
-output_path = "images/food"
+img_path = "/Users/anthonyluo/Documents/WebsiteFullPictures/landscape"
+output_path = "images/cityscape"
 files = [f for f in listdir(img_path) if isfile(join(img_path, f))]
-dimension = 800
+dimension = 2000
 
-cropFunction = crop_image_square
+cropFunction = lambda x: x
 
 print(files)
 for f in files:
