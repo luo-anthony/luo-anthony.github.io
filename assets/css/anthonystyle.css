@@ -416,8 +416,9 @@ a.header:hover {
 }
 
 /* SMARTPHONES */
+/* TODO MAKE WEBSITE MORE MOBILE FRIENDLY */
 
-@media (max-width: 440px) {
+@media (max-width: 800px) {
 
     #headshot {
         padding-left: 0;
@@ -478,6 +479,10 @@ a.header:hover {
         justify-content: center;
         align-items: center;
         flex-wrap: none;
+    }
+
+    .tilecolumn {
+        width: 100%;
     }
 
     #footer-text {
