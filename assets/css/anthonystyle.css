@@ -183,12 +183,24 @@ h5.stats {
     flex-wrap: wrap;
 }
 
+.tilecolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: green; */
+    width: 25vw;
+    /* flex-wrap: wrap; */
+}
+
 .content {
     display: flex;
     flex-direction: column;
     justify-content: top;
     background-color: white;
-    width: 23.5vw; 
+    width: 23.5vw;
     /* maintains proportional box size regardless of screen */
     height: auto;
     padding-left: 1.5vw;
