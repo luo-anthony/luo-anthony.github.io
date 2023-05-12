@@ -131,9 +131,9 @@ h5 {
 }
 
 h5.stats {
-    font-weight: 400;
     margin-bottom: 0;
-    color: #303030
+    font-weight: 300;
+    color: #252525
 }
 
 #intro-block {
