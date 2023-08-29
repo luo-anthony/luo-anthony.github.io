@@ -136,6 +136,16 @@ h5.stats {
     color: #252525
 }
 
+h6 {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 0.85vw;
+    font-weight: 500;
+    margin-bottom: 0;
+    font-style: italic;
+    color: #0193E5
+}
+
 #intro-block {
     margin-top: 0;
     padding-top: 0;
@@ -203,7 +213,7 @@ h5.stats {
     width: 23.5vw;
     /* maintains proportional box size regardless of screen */
     height: auto;
-    padding-left: 1.5vw;
+    padding-left: 1.6vw;
     padding-bottom: 2vw;
     padding-top: 1.5vw;
     padding-right: 0.5vw;
@@ -383,6 +393,11 @@ a.header:hover {
 
     h5 {
         font-size: 1.5vw;
+    }
+
+    h6 {
+        font-size: 1.25vw;
+        font-weight: 400;
     }
 
     .content {
