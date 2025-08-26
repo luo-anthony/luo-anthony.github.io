@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
 
+:root {
+    --primary-blue: #0193E5;
+    --primary-blue-dark: #0174B8;
+}
+
 * {
     font-family: "Open Sans", Helvetica, sans-serif;
 }
@@ -416,58 +421,74 @@ a.header:hover {
     }
 
     h3 {
-        font-size: 3.4vw;
+        font-size: 2.6vw;
+        margin-bottom: 0.2vw;
     }
 
     p,
     h4 {
-        font-size: 3.1vw;
+        font-size: 2.3vw;
         font-weight: 400;
+        line-height: 1.4;
     }
 
     h5 {
-        font-size: 2.7vw;
-        margin-top: -0.2vh;
+        font-size: 2.1vw;
+        margin-top: 0;
         font-weight: 500;
+        line-height: 1.3;
     }
 
     h6 {
-        font-size: 2.3vw;
+        font-size: 1.9vw;
+        line-height: 1.3;
     }
 
     .content {
-        width: 87%;
-        margin-bottom: 0.6vh;
-        margin-top: 0.6vh;
-        padding: 3vw;
-        overflow: auto;
-        border-radius: 3vw;
+        width: 90%;
+        margin-bottom: 1.5vw;
+        margin-top: 1vw;
+        padding: 2.5vw;
+        overflow: visible;
+        border-radius: 2.5vw;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         border: 1px solid rgba(229, 231, 235, 0.8);
     }
 
     .item {
-        margin-top: 1.4vh;
+        margin-top: 2vw;
         border-left: 3px solid #0193E5;
-        padding-left: 3vw;
+        padding-left: 1.5vw;
         padding-top: 0.8vw;
         padding-bottom: 0.8vw;
-        width: 80%;
-        border-radius: 0 1vw 1vw 0;
+        width: 95%;
+        border-radius: 0 1.5vw 1.5vw 0;
         background: linear-gradient(90deg, rgba(1, 147, 229, 0.08) 0%, transparent 100%);
     }
 
+    .socialwrapper {
+        margin-top: -0.5vh;
+        padding-top: 0;
+    }
+
+    .socialbuttons {
+        margin-top: 1vw;
+        padding-top: 1.5vw;
+        max-width: 80%;
+    }
 
     .tiled {
         width: 95%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-wrap: none;
+        flex-wrap: nowrap;
+        gap: 0;
     }
 
     .tilecolumn {
         width: 100%;
+        max-width: 450px;
     }
 
     #footer-text {
@@ -485,16 +506,5 @@ a.header:hover {
         border-top: 0.15vh solid #0193E5;
         margin-bottom: 0;
         padding-bottom: 0;
-    }
-
-    .socialwrapper {
-        margin-top: -0.5vh;
-        padding-top: 0;
-    }
-
-    .socialbuttons {
-        margin-top: 1vw;
-        padding-top: 1.5vw;
-        max-width: 80%;
     }
 }
