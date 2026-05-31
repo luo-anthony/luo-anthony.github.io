@@ -1,164 +1,157 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
-	Designed by Anthony Luo (luo-anthony.github.io)
-    © Anthony Luo 2025 | All rights reserved. 
-    Created using Figma, Photoshop, HTML & CSS
+    Anthony Luo — luo-anthony.github.io
+    © 2026 Anthony Luo. All rights reserved.
 -->
-<html>
+<html lang="en">
 
 <head>
-    <title>Anthony Luo</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/anthonystyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anthony Luo</title>
+    <meta name="description"
+        content="Anthony Luo — research engineer at ElevenLabs. Speech AI, low-latency systems, and machine learning." />
+    <meta name="author" content="Anthony Luo" />
+
+    <link rel="icon" href="favicon.ico" sizes="any" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anthony Luo" />
+    <meta property="og:description"
+        content="Research engineer at ElevenLabs. Speech AI, low-latency systems, and machine learning." />
+    <meta property="og:url" content="https://anthonyluo.com/" />
+    <meta property="og:image" content="https://anthonyluo.com/Thumbnail.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anthony Luo" />
+    <meta name="twitter:description"
+        content="Research engineer at ElevenLabs. Speech AI, low-latency systems, and machine learning." />
+    <meta name="twitter:image" content="https://anthonyluo.com/Thumbnail.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body>
-    <div id="base">
-        <!-- Top Block -->
-        <div id="hi-block">
-            <!-- TODO REDUCE SIZE OF PICTURE  -->
-            <img id="headshot" src="images/homepage/AnthonyWebsiteHeadshot.png">
-            <div id="title-block">
-                <h1>Hi! I'm Anthony Luo </h1>
-                <div id="intro-block">
-                    <h2>I'm a Research Engineer at ElevenLabs</h2>
+    <main class="page">
+        <div class="grid">
+            <!-- Identity -->
+            <header class="identity">
+                <div class="identity-head">
+                    <h1 class="wordmark"><span>Anthony</span><span>Luo</span></h1>
+                    <div class="rule" aria-hidden="true"></div>
+                    <p class="role">Research Engineer<span class="role-org">@ <a href="https://elevenlabs.io"
+                                target="_blank" rel="noopener noreferrer">ElevenLabs</a></span></p>
+                    <p class="bio">Engineer, artist, photographer, and angel investor.</p>
                 </div>
-                <hr />
-                <div id="blue-buttons">
-                    <a href="https://www.linkedin.com/in/luo-anthony/" class="socialwrapper">
-                        <img alt="LinkedIn" src="assets/buttons/Linkedin.png" class="socialbuttons">
-                    </a>
-                    <a href="https://github.com/luo-anthony" class="socialwrapper">
-                        <img alt="Github" src="assets/buttons/Github.png" class="socialbuttons">
-                    </a>
-                    <a href="mailto:luo.anthony47@gmail.com" class="socialwrapper">
-                        <img alt="Email" src="assets/buttons/EmailNew.png" class="socialbuttons">
-                    </a>
+                <div class="identity-foot">
+                    <nav class="links" aria-label="Contact and social">
+                        <a class="link" href="https://www.linkedin.com/in/luo-anthony/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                        <a class="link" href="https://github.com/luo-anthony" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                        <a class="link" href="mailto:luo.anthony47@gmail.com">Email</a>
+                        <a class="link" href="https://luoanthony.myportfolio.com/work" target="_blank"
+                            rel="noopener noreferrer">Photography <span class="ext" aria-hidden="true">↗</span></a>
+                        <a class="link" href="https://anthonyluocreative.com/" target="_blank"
+                            rel="noopener noreferrer">Art <span class="ext" aria-hidden="true">↗</span></a>
+                    </nav>
+                    <p class="colophon">© Anthony Luo · 2026</p>
                 </div>
-            </div>
+            </header>
+
+            <!-- Experience -->
+            <section class="section section--1" aria-labelledby="exp-label">
+                <h2 class="section-label" id="exp-label">Experience</h2>
+                <ul class="entries">
+                    <li class="entry">
+                        <span class="entry-title">ElevenLabs</span>
+                        <span class="entry-meta">Research Engineer · <span class="entry-date">Jul 2025 –
+                                Present</span></span>
+                        <span class="entry-detail">Inference for Text ↔ Speech</span>
+                    </li>
+                    <li class="entry">
+                        <span class="entry-title">Old Mission</span>
+                        <span class="entry-meta">Software Engineer · <span class="entry-date">2023 – 2025</span></span>
+                        <span class="entry-detail">Proprietary Trading</span>
+                    </li>
+                    <li class="entry">
+                        <span class="entry-title">Datadog</span>
+                        <span class="entry-meta">SWE Intern · <span class="entry-date">Fall 2022</span></span>
+                        <span class="entry-detail">Distributed Query Execution</span>
+                    </li>
+                    <li class="entry">
+                        <span class="entry-title">Five Rings</span>
+                        <span class="entry-meta">SW Dev Intern · <span class="entry-date">Summer 2022</span></span>
+                        <span class="entry-detail">Proprietary Trading</span>
+                    </li>
+                    <li class="entry">
+                        <span class="entry-title">Amazon Web Services</span>
+                        <span class="entry-meta">SDE Intern · <span class="entry-date">Summer 2021</span></span>
+                        <span class="entry-detail">IoT SiteWise Monitor</span>
+                    </li>
+                    <li class="entry">
+                        <span class="entry-title">HP Inc.</span>
+                        <span class="entry-meta">SWE Intern · <span class="entry-date">2019 – 2021</span></span>
+                        <span class="entry-detail">Firmware Security (Embedded)</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Research -->
+            <section class="section section--2" aria-labelledby="res-label">
+                <h2 class="section-label" id="res-label">Research</h2>
+                <ul class="entries">
+                    <li class="entry">
+                        <span class="entry-title">Cyber-Physical Systems Group</span>
+                        <span class="entry-meta">Univ. of Oxford · <span class="entry-date">2022</span></span>
+                        <span class="entry-detail">Deep Learning on Embedded Systems</span>
+                    </li>
+                    <li class="entry">
+                        <span class="entry-title">Heffner Biomedical Imaging Lab</span>
+                        <span class="entry-meta">Columbia University · <span class="entry-date">2020 –
+                                2021</span></span>
+                        <span class="entry-detail">Unsupervised ML for Pulmonary Imaging</span>
+                    </li>
+                    <li class="entry">
+                        <span class="entry-title">Software Engr. &amp; Assurance Lab</span>
+                        <span class="entry-meta">Boise State University · <span class="entry-date">2017 –
+                                2019</span></span>
+                        <span class="entry-detail">Forensic Analysis of Bitcoin</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Education + Stats -->
+            <section class="section section--3 section-stack" aria-labelledby="edu-label hl-label">
+                <div>
+                    <h2 class="section-label" id="edu-label">Education</h2>
+                    <ul class="entries">
+                        <li class="entry">
+                            <span class="entry-title">Columbia University</span>
+                            <span class="entry-meta">B.S. Computer Science · <span class="entry-date">2023</span></span>
+                            <span class="entry-detail">summa cum laude (top 5%)</span>
+                        </li>
+                        <li class="entry">
+                            <span class="entry-title">University of Oxford</span>
+                            <span class="entry-meta">Columbia–Oxbridge Scholar · <span
+                                    class="entry-date">2022</span></span>
+                            <span class="entry-detail">St. Anne's College</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="section-label" id="hl-label">Stats</h2>
+                    <div class="highlights">
+                        <span><b>3 peer-reviewed publications</b> · 50+ citations</span>
+                        <span><b>4.19 / 4.0 GPA</b> at Columbia</span>
+                    </div>
+                </div>
+            </section>
         </div>
-
-
-        <!-- Bottom Block -->
-        <div id="bottom">
-            <div class="tiled">
-                <div class="tilecolumn">
-                    <div class="content">
-                        <h3>Education</h3>
-                        <div class="item">
-                            <h4>Columbia University</h4>
-                            <h5>Bachelor of Science in CS, 2023</h5>
-                            <h6>summa cum laude (top 5%)</h6>
-                        </div>
-                        <div class="item">
-                            <h4>University of Oxford</h4>
-                            <h5>Columbia Oxbridge Scholar, Spring 2022</h5>
-                            <h6>St. Anne's College</h6>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <h3>My Stats</h3>
-                        <div class="item">
-                            <h4 class="stats">4.19/4.0 GPA</h4>
-                            <h6>(some professors award A+ = 4.33)</h6>
-                            <h5 class="stats">Columbia University</h5>
-                        </div>
-                        <!-- <div class="item">
-                            <h4 class="stats">Russell C. Mills Award in CS</h4>
-                            <h5 class="stats">Columbia University, Class of 2023</h5>
-                        </div> -->
-                        <div class="item">
-                            <h4 class="stats">3 peer-reviewed publications </h4>
-                            <h5 class="stats">50+ citations, 2X 2nd author, 1X 1st author</h5>
-                        </div>
-                        <div class="item">
-                            <h4 class="stats">Python, C, Typescript, LLMs, ...</h4>
-                            <h5 class="stats">Technical Skills</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="tilecolumn">
-                    <div class="content">
-                        <h3>Industry Experience</h3>
-                        <div class="item">
-                            <h4>ElevenLabs</h4>
-                            <h5>Jul 2025 - Present, Research Engineer</h5>
-                            <h6>Inference for Text &lt;&gt; Speech</h6>
-                        </div>
-                        <div class="item">
-                            <h4>Old Mission</h4>
-                            <h5>Aug 2023 - Jun 2025, Software Engineer</h5>
-                            <h6>Proprietary Trading</h6>
-                        </div>
-                        <div class="item">
-                            <h4>Datadog</h4>
-                            <h5>Fall 2022, Software Engineer Intern</h5>
-                            <h6>Distributed Query Execution System</h6>
-                        </div>
-                        <div class="item">
-                            <h4>Five Rings</h4>
-                            <h5>Summer 2022, Software Developer Intern</h5>
-                            <h6>Proprietary Trading</h6>
-                        </div>
-                        <div class="item">
-                            <h4>Amazon Web Services (AWS)</h4>
-                            <h5>Summer 2021, SDE Intern</h5>
-                            <h6>IoT SiteWise Monitor</h6>
-                        </div>
-                        <div class="item">
-                            <h4>HP Inc.</h4>
-                            <h5>2019 - 2021, Software Engineer Intern</h5>
-                            <h6>Firmware Security (Embedded Systems)</h6>
-                        </div>
-                    </div>
-                    <!-- <div class="content" style="padding-bottom: 1.5vw;">
-                        <p>I'm currently interested in applications of software engineering for
-                            finance, law, and medicine. </p>
-                        <p>
-                    </div> -->
-                </div>
-                <div class="tilecolumn">
-                    <div class="content">
-                        <h3>Research Experience</h3>
-                        <div class="item">
-                            <h4>Cyber Physical Systems Group</h4>
-                            <h5>2022, University of Oxford</h5>
-                            <h6>Deep Learning on Embedded Systems</h6>
-                        </div>
-                        <div class="item">
-                            <h4>Heffner Biomedical Imaging Lab</h4>
-                            <h5>2020 - 2021, Columbia University</h5>
-                            <h6>Unsupervised ML for Pulmonary Imaging</h6>
-                        </div>
-                        <div class="item">
-                            <h4>Software Engr. &amp; Assurance Lab</h4>
-                            <h5>2017 - 2019, Boise State University</h5>
-                            <h6>Quantitative and Forensic Analysis of Bitcoin</h6>
-                        </div>
-                    </div>
-                    <div class="content" id="photobutton"
-                        onclick="location.href = 'https://luoanthony.myportfolio.com/work'" style="background-image: url('images/homepage/PhotoButton.jpg');
-                            background-position: center; 
-                            background-repeat: no-repeat;
-                            background-size: cover;">
-                        <h3 style="margin-bottom: 2vh; color: white;">Photography</h3>
-                        <p style="color: white">In my spare time, I enjoy
-                            photography (click to see more).</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    </main>
 </body>
-
-<footer id="footer">
-    <p id="footer-text"><a class="footerlink" href="https://www.linkedin.com/in/luo-anthony/">&copy; 2025 Anthony
-            Luo. All
-            rights reserved. | Created using Figma, Photoshop, HTML &amp; CSS</a>
-    </p>
-</footer>
-
 
 </html>
