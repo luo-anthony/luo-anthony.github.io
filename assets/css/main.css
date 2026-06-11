@@ -1,19 +1,48 @@
 /*
   Anthony Luo — personal site
-  Minimalist monochrome design. Pure static HTML + CSS, no build step.
+  Minimalist reactive design. Pure static HTML + CSS + JS, no build step.
 */
 
 /* ---------- Tokens ---------- */
 :root {
+  color-scheme: light;
+
   --bg: #ffffff;
   --fg: hsl(0 0% 9%);
-  --muted: hsl(0 0% 45%);
-  --faint: hsl(0 0% 62%);
+  --muted: hsl(0 0% 42%);
+  --faint: hsl(0 0% 52%);
   --border: hsl(0 0% 88%);
   --accent: hsl(201 92% 45%);
+  --accent-text: hsl(201 96% 34%);
 
-  /* fit-to-viewport scaling (the artist site's --home-scale trick) */
+  /* contour-canvas colors — read by JS via getComputedStyle,
+     comma syntax so the canvas color parser accepts them */
+  --field-line: hsl(0, 0%, 9%);
+  --field-accent: hsl(201, 92%, 45%);
+  --field-line-alpha: 0.08;
+  --field-accent-alpha: 0.3;
+  --grain: 0.03;
+
+  /* fit-to-viewport scaling */
   --scale: 1;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: hsl(216 18% 7%);
+  --fg: hsl(0 0% 93%);
+  --muted: hsl(0 0% 64%);
+  --faint: hsl(0 0% 58%);
+  --border: hsl(0 0% 18%);
+  --accent: hsl(201 92% 60%);
+  --accent-text: hsl(201 92% 64%);
+
+  --field-line: hsl(0, 0%, 93%);
+  --field-accent: hsl(201, 92%, 65%);
+  --field-line-alpha: 0.1;
+  --field-accent-alpha: 0.36;
+  --grain: 0.05;
 }
 
 @media (max-height: 860px) { :root { --scale: 0.96; } }
@@ -43,6 +72,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ul { list-style: none; }
@@ -52,9 +82,98 @@ a {
   text-decoration: none;
 }
 
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Reactive layers ----------
+   z-stack: contour canvas (0) → content (2) → toggle (3) → grain (4) */
+#field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* recede behind the text block, full strength toward the edges */
+  -webkit-mask-image: radial-gradient(120% 110% at 50% 48%,
+      rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.8) 55%, rgb(0, 0, 0) 100%);
+  mask-image: radial-gradient(120% 110% at 50% 48%,
+      rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.8) 55%, rgb(0, 0, 0) 100%);
+}
+
+/* film grain — a whisper of analog texture over everything */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: var(--grain);
+}
+
+/* ---------- Theme toggle ---------- */
+.theme-toggle {
+  position: fixed;
+  top: clamp(1.25rem, 3vh, 2rem);
+  right: clamp(1.25rem, 4vw, 3rem);
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--accent-text);
+  border-color: var(--border);
+}
+
+.theme-toggle .icon {
+  grid-area: 1 / 1;
+  width: 1.15rem;
+  height: 1.15rem;
+  transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* show the theme you'd switch to: moon in light mode, sun in dark mode */
+.icon-sun {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+}
+
+[data-theme="dark"] .icon-sun {
+  opacity: 1;
+  transform: none;
+}
+
+[data-theme="dark"] .icon-moon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.6);
+}
+
 /* ---------- Page shell ---------- */
 .page {
+  position: relative;
+  z-index: 2;
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,17 +235,20 @@ a {
 
 .role-org a:hover,
 .role-org a:focus-visible {
-  color: var(--accent);
+  color: var(--accent-text);
   border-bottom-color: var(--accent);
 }
 
 .bio {
   margin-top: 1.1rem;
   max-width: 32ch;
-  font-size: 0.95rem;
-  font-weight: 300;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.08rem;
+  font-weight: 400;
+  letter-spacing: 0.005em;
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .identity-foot {
@@ -165,7 +287,7 @@ a {
 }
 
 .link:hover,
-.link:focus-visible { color: var(--accent); }
+.link:focus-visible { color: var(--accent-text); }
 
 .link:hover::before,
 .link:focus-visible::before { transform: translateY(-50%) scaleY(1); }
@@ -189,10 +311,11 @@ a {
   font-weight: 500;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   padding-bottom: 0.8rem;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--accent);
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .entries {
@@ -208,7 +331,10 @@ a {
   font-weight: 500;
   letter-spacing: -0.005em;
   color: var(--fg);
+  transition: color 0.25s ease;
 }
+
+.entry:hover .entry-title { color: var(--accent-text); }
 
 .entry-meta {
   font-size: 0.85rem;
@@ -218,18 +344,20 @@ a {
 }
 
 .entry-date {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .entry-detail {
-  font-size: 0.83rem;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-size: 0.94rem;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   color: var(--faint);
   margin-top: 0.25rem;
 }
 
-/* a section cell holding two stacked sub-sections (Education + Highlights) */
+/* a section cell holding two stacked sub-sections (Education + Stats) */
 .section-stack {
   display: flex;
   flex-direction: column;
@@ -300,6 +428,7 @@ a {
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--border);
     margin-bottom: 0.25rem;
+    transition: border-color 0.3s ease;
   }
 
   .identity-foot {
