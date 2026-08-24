@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+    Anthony Luo — luo-anthony.github.io
+    © 2026 Anthony Luo. All rights reserved.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse Rhythm — Anthony Luo</title>
+    <meta name="description"
+        content="Pulse Rhythm is a standalone Apple Watch rhythm game: read a written rhythm, tap it back against the click, chase a score. Support and privacy." />
+    <meta name="author" content="Anthony Luo" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="canonical" href="https://anthonyluo.com/pulse-rhythm" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pulse Rhythm" />
+    <meta property="og:description" content="A standalone Apple Watch rhythm game. Read it. Feel it. Tap it." />
+    <meta property="og:url" content="https://anthonyluo.com/pulse-rhythm" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Pulse Rhythm" />
+    <meta name="twitter:description" content="A standalone Apple Watch rhythm game. Read it. Feel it. Tap it." />
+
+    <!-- Set the theme before the stylesheet loads so there is no flash of the wrong theme -->
+    <script>
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem("theme"); } catch (e) { }
+            if (t !== "light" && t !== "dark")
+                t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", t);
+            var m = document.querySelector('meta[name="theme-color"]');
+            if (m) m.setAttribute("content", t === "dark" ? "#0f1115" : "#ffffff");
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/subpage.css" />
+</head>
+
+<body>
+    <!-- Reactive background layer -->
+    <canvas id="field" aria-hidden="true"></canvas>
+
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.4" />
+            <path
+                d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7" />
+        </svg>
+        <svg class="icon icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.6 14.6A8.6 8.6 0 0 1 9.4 3.4a8.6 8.6 0 1 0 11.2 11.2Z" />
+        </svg>
+    </button>
+
+    <main class="subpage">
+        <article class="article">
+            <header>
+                <p class="crumb"><a href="/">Anthony Luo</a><span class="sep" aria-hidden="true">/</span>Apps</p>
+                <h1 class="article-title">Pulse Rhythm</h1>
+                <div class="rule" aria-hidden="true"></div>
+                <p class="article-sub">A rhythm game and trainer for Apple Watch. Read a written rhythm, tap it back
+                    against an always-on click, chase a score.</p>
+            </header>
+
+            <section class="article-section" aria-labelledby="game-label">
+                <h2 class="section-label" id="game-label">The game</h2>
+                <p>Pulse Rhythm runs entirely on the watch — no iPhone app, no account, no network. The metronome never
+                    stops: you read the notation for as long as you like, then join on any downbeat and tap the rhythm
+                    on the surface below the line. Only timing counts.</p>
+                <p>Four ways to play: <strong>Rhythm Run</strong> (read a bar, tap it, climb a ladder from quarter notes
+                    to triplets and 6/8, with a tempo that ramps as you clear bars), <strong>Endless</strong>
+                    (sight-read a stream of bars with no pause), <strong>Journey</strong> (guided sections with a quiz
+                    gating each next one), and <strong>Conductor</strong> (hold a tempo from memory, graded in words).
+                    The beat can be a click or a tap on the wrist.</p>
+            </section>
+
+            <section class="article-section" id="support" aria-labelledby="support-label">
+                <h2 class="section-label" id="support-label">Support</h2>
+                <p><strong>The click is silent.</strong> watchOS Silent Mode mutes the app's sound. Turn Silent Mode
+                    off, or switch the beat to HAPTIC on the home screen — each beat then taps your wrist and the beat
+                    pips on the line carry the count.</p>
+                <p><strong>Taps feel late or early.</strong> The grading window is ±180 ms around each note, measured
+                    from the moment your finger lands. Bluetooth headphones add delay; the app compensates for the
+                    audio route it can see, but a very high-latency headset can still feel off — try the watch speaker
+                    or the haptic beat.</p>
+                <p><strong>A section is locked.</strong> Journey opens each section when you pass the previous one's
+                    quiz (three of four).</p>
+                <p>Anything else — bugs, ideas, a rhythm that felt unfair — email
+                    <a class="textlink" href="mailto:luo.anthony47@gmail.com?subject=Pulse%20Rhythm">luo.anthony47@gmail.com</a>.
+                    Please include your watch model and watchOS version.</p>
+            </section>
+
+            <section class="article-section" aria-labelledby="privacy-label">
+                <h2 class="section-label" id="privacy-label">Privacy</h2>
+                <p>Pulse Rhythm collects no data. Scores and settings stay on your watch.</p>
+                <p><a class="textlink" href="/pulse-rhythm/privacy">Read the privacy policy</a></p>
+            </section>
+
+            <footer class="article-foot">
+                <nav class="links" aria-label="Related pages">
+                    <a class="link" href="/">Home</a>
+                    <a class="link" href="/pulse-rhythm/privacy">Privacy policy</a>
+                </nav>
+                <p class="colophon">© Anthony Luo Creative LLC · 2026</p>
+            </footer>
+        </article>
+    </main>
+
+    <script src="/assets/js/main.js" defer></script>
+</body>
+
+</html>

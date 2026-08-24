@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+    Anthony Luo — luo-anthony.github.io
+    © 2026 Anthony Luo. All rights reserved.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse Rhythm Privacy Policy — Anthony Luo</title>
+    <meta name="description"
+        content="Privacy policy for Pulse Rhythm, the Apple Watch rhythm game. The app collects no data." />
+    <meta name="author" content="Anthony Luo" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="canonical" href="https://anthonyluo.com/pulse-rhythm/privacy" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pulse Rhythm Privacy Policy" />
+    <meta property="og:description" content="Pulse Rhythm collects no data. Scores and settings stay on your watch." />
+    <meta property="og:url" content="https://anthonyluo.com/pulse-rhythm/privacy" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Pulse Rhythm Privacy Policy" />
+    <meta name="twitter:description" content="Pulse Rhythm collects no data. Scores and settings stay on your watch." />
+
+    <!-- Set the theme before the stylesheet loads so there is no flash of the wrong theme -->
+    <script>
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem("theme"); } catch (e) { }
+            if (t !== "light" && t !== "dark")
+                t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", t);
+            var m = document.querySelector('meta[name="theme-color"]');
+            if (m) m.setAttribute("content", t === "dark" ? "#0f1115" : "#ffffff");
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/subpage.css" />
+</head>
+
+<body>
+    <!-- Reactive background layer -->
+    <canvas id="field" aria-hidden="true"></canvas>
+
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.4" />
+            <path
+                d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7" />
+        </svg>
+        <svg class="icon icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.6 14.6A8.6 8.6 0 0 1 9.4 3.4a8.6 8.6 0 1 0 11.2 11.2Z" />
+        </svg>
+    </button>
+
+    <main class="subpage">
+        <article class="article">
+            <header>
+                <p class="crumb"><a href="/">Anthony Luo</a><span class="sep" aria-hidden="true">/</span><a
+                        href="/pulse-rhythm">Pulse Rhythm</a></p>
+                <h1 class="article-title">Privacy Policy</h1>
+                <div class="rule" aria-hidden="true"></div>
+                <p class="article-sub">Effective August 22, 2026. Applies to the Pulse Rhythm app for Apple Watch,
+                    published by Anthony Luo Creative LLC.</p>
+            </header>
+
+            <section class="article-section" aria-labelledby="short-label">
+                <h2 class="section-label" id="short-label">The short version</h2>
+                <p><strong>Pulse Rhythm does not collect, transmit, sell, or share any personal data. It has no
+                        account, no analytics, no advertising, and makes no network connections.</strong></p>
+            </section>
+
+            <section class="article-section" aria-labelledby="watch-label">
+                <h2 class="section-label" id="watch-label">What stays on your watch</h2>
+                <p>The app keeps a small amount of game state on the watch itself, in the app's own storage, so the
+                    game can remember where you are:</p>
+                <ul class="article-list">
+                    <li>Best scores and grades for each mode and difficulty.</li>
+                    <li>Journey progress — which sections you have completed and how many exercises.</li>
+                    <li>Your settings: the beat channel (sound or haptic) and the beat guide.</li>
+                    <li>Simple practice statistics that the game uses to pick which pattern to offer next.</li>
+                </ul>
+                <p>None of this leaves the device. It is not tied to your name, Apple ID, or any identifier, and it is
+                    deleted when you delete the app. Settings includes a "Reset bests" control that clears scores on
+                    demand.</p>
+            </section>
+
+            <section class="article-section" aria-labelledby="not-label">
+                <h2 class="section-label" id="not-label">What the app does not do</h2>
+                <ul class="article-list">
+                    <li>No data is sent to us or to anyone else — there is no server.</li>
+                    <li>No third-party SDKs, analytics, crash reporters, or ad networks are included.</li>
+                    <li>No access to the microphone, health data, location, contacts, or motion sensors.</li>
+                    <li>No tracking across apps or websites, and no cookies.</li>
+                    <li>No data is collected from children or anyone else; the app is suitable for all ages.</li>
+                </ul>
+            </section>
+
+            <section class="article-section" aria-labelledby="apple-label">
+                <h2 class="section-label" id="apple-label">Apple</h2>
+                <p>The app is distributed through the App Store. Apple may process information such as your purchase
+                    and, if you opt in on your device, crash and usage diagnostics, under
+                    <a class="textlink" href="https://www.apple.com/legal/privacy/" target="_blank"
+                        rel="noopener noreferrer">Apple's privacy policy</a>. We do not receive personal data from
+                    Apple.</p>
+            </section>
+
+            <section class="article-section" aria-labelledby="changes-label">
+                <h2 class="section-label" id="changes-label">Changes</h2>
+                <p>If a future version of the app ever changes any of the above — for example, by adding an optional
+                    online feature — this page will be updated first and the effective date changed, and the app's App
+                    Store privacy label will say so.</p>
+            </section>
+
+            <section class="article-section" aria-labelledby="contact-label">
+                <h2 class="section-label" id="contact-label">Contact</h2>
+                <p>Questions about this policy:
+                    <a class="textlink"
+                        href="mailto:luo.anthony47@gmail.com?subject=Pulse%20Rhythm%20privacy">luo.anthony47@gmail.com</a>.
+                </p>
+            </section>
+
+            <footer class="article-foot">
+                <nav class="links" aria-label="Related pages">
+                    <a class="link" href="/pulse-rhythm">Back to Pulse Rhythm</a>
+                </nav>
+                <p class="colophon">© Anthony Luo Creative LLC · 2026</p>
+            </footer>
+        </article>
+    </main>
+
+    <script src="/assets/js/main.js" defer></script>
+</body>
+
+</html>
