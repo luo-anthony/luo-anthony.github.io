@@ -324,7 +324,36 @@ body::after {
   gap: 1.35rem;
 }
 
-.entry { display: flex; flex-direction: column; }
+.entry { position: relative; display: flex; flex-direction: column; }
+
+/* linked entry: the whole entry is the hit target, a small arrow appears on hover */
+.entry-link::before {
+  content: "";
+  position: absolute;
+  inset: -0.35rem -0.5rem;
+}
+
+.entry-link::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 0.3em;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: var(--faint);
+  opacity: 0;
+  transform: translate(-3px, 2px);
+  transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.entry:hover .entry-link::after,
+.entry-link:focus-visible::after {
+  opacity: 1;
+  transform: none;
+}
+
+@media (hover: none) {
+  .entry-link::after { opacity: 0.6; transform: none; }
+}
 
 .entry-title {
   font-size: 1.08rem;
@@ -357,25 +386,14 @@ body::after {
   margin-top: 0.25rem;
 }
 
-/* a section cell holding two stacked sub-sections (Education + Stats) */
+/* a section cell holding two stacked sub-sections (Education + Highlights) */
 .section-stack {
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
 }
 
-.highlights {
-  display: flex;
-  flex-direction: column;
-  gap: 0.95rem;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
-.highlights b {
-  font-weight: 500;
-  color: var(--fg);
-}
+.entries--compact { gap: 1rem; }
 
 /* ---------- Animations ---------- */
 @keyframes draw-in {
