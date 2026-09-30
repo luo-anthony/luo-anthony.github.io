@@ -333,26 +333,21 @@ body::after {
   inset: -0.35rem -0.5rem;
 }
 
+/* inline + leading no-break space so the arrow never wraps onto a line by itself */
 .entry-link::after {
-  content: "↗";
-  display: inline-block;
-  margin-left: 0.3em;
+  content: "\00a0↗";
   font-size: 0.8em;
   font-weight: 400;
   color: var(--faint);
   opacity: 0;
-  transform: translate(-3px, 2px);
-  transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.25s ease;
 }
 
 .entry:hover .entry-link::after,
-.entry-link:focus-visible::after {
-  opacity: 1;
-  transform: none;
-}
+.entry-link:focus-visible::after { opacity: 1; }
 
 @media (hover: none) {
-  .entry-link::after { opacity: 0.6; transform: none; }
+  .entry-link::after { opacity: 0.6; }
 }
 
 .entry-title {
